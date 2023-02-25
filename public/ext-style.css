@@ -1,4 +1,4 @@
-#container {
+body {
   position: relative;
   background: rgb(113, 167, 186);
   background: linear-gradient(90deg, rgb(136, 200, 223) 30%, rgb(255, 182, 246) 100%, rgba(0, 212, 255, 1) 100%);
@@ -6,12 +6,22 @@
 }
 
 #navbar {
-  background: #ffffff9d;
+  background: #ffffff;
   filter: blur(1);
 }
 
+#heroImg {
+  background: rgb(113, 167, 186);
+  background: linear-gradient(90deg, rgb(136, 200, 223) 30%, rgb(255, 182, 246) 100%, rgba(0, 212, 255, 1) 100%);
+}
+
+#mobileMenu {
+  background-color: #ffffffe3;
+  filter: blur(5);
+}
+
 #mobileMenu ul li:hover {
-  background: #ffffff98;
+  background: #b8b8b898;
 }
 
 #mobileMenu ul li {
@@ -35,17 +45,25 @@
 }
 
 #footer {
-  position: absolute;
   margin-bottom: 50px;
   width: 100%;
   bottom: 0;
 }
 
 #talk {
-  width: 110px;
   background: rgb(113, 167, 186);
   background: linear-gradient(90deg, rgb(86, 190, 228) 30%, rgb(218, 121, 206) 100%, rgba(0, 212, 255, 1) 100%);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
+}
+
+#footerContainer {
+  background: #ffffff;
+  filter: blur(1);
+}
+
+#btn-lets-talk {
+  background: rgb(113, 167, 186);
+  background: linear-gradient(90deg, rgb(86, 190, 228) 30%, rgb(218, 121, 206) 100%, rgba(0, 212, 255, 1) 100%);
 }
