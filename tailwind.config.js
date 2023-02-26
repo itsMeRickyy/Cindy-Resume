@@ -7,6 +7,9 @@ module.exports = {
         mynverve: ["Mynerve"],
         poppins: ["Poppins"],
       },
+      colors: {
+        mainGradient: [""],
+      },
     },
   },
   plugins: [],
