@@ -1,7 +1,20 @@
-body {
-  position: relative;
-  background: rgb(113, 167, 186);
-  background: linear-gradient(90deg, rgb(136, 200, 223) 30%, rgb(255, 182, 246) 100%, rgba(0, 212, 255, 1) 100%);
+/* Animate */
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+#container {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
   height: 1000px;
 }
 
@@ -66,4 +79,9 @@ body {
 #btn-lets-talk {
   background: rgb(113, 167, 186);
   background: linear-gradient(90deg, rgb(86, 190, 228) 30%, rgb(218, 121, 206) 100%, rgba(0, 212, 255, 1) 100%);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+#btn-lets-talk:hover {
 }
