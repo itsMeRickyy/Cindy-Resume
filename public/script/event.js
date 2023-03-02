@@ -1,5 +1,6 @@
 const toggle = document.getElementById("toggle");
 const menu = document.getElementById("mobileMenu");
+const listMenu = menu.querySelector("ul li a");
 
 toggle.addEventListener("click", () => {
   const menu = document.getElementById("mobileMenu");
@@ -16,6 +17,12 @@ toggle.addEventListener("click", () => {
 
 document.addEventListener("click", (e) => {
   if (!toggle.contains(e.target) && !menu.contains(e.target)) {
+    menu.style.display = "none";
+  }
+});
+
+listMenu.addEventListener("click", (e) => {
+  if (listMenu.contains(e.target)) {
     menu.style.display = "none";
   }
 });
