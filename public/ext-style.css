@@ -20,6 +20,13 @@
 
 #navigasi {
   background: #ffffff44;
+  border-bottom: solid white 1px;
+  border-right: solid white 1px;
+}
+
+#whatA-i-do {
+  border-bottom: solid white 1px;
+  border-right: solid white 1px;
 }
 
 #heroImg {
@@ -71,7 +78,6 @@
 }
 
 #footerContainer {
-  background: #ffffff;
   filter: blur(1);
 }
 

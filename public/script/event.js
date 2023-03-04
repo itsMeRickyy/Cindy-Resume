@@ -1,6 +1,6 @@
 const toggle = document.getElementById("toggle");
 const menu = document.getElementById("mobileMenu");
-const listMenu = menu.querySelector("#menu .mobileBtn button");
+const listMenu = menu.querySelector(".mobileBtn button");
 
 toggle.addEventListener("click", () => {
   const menu = document.getElementById("mobileMenu");
@@ -21,9 +21,18 @@ document.addEventListener("click", (e) => {
   }
 });
 
-// listMenu.addEventListener("click", (e) => {
-//   if (listMenu.contains(e.target)) {
-//     menu.style.display = "none";
+listMenu.addEventListener("click", (e) => {
+  menu.style.display = "none";
+});
+
+// listMenu.addEventListener("click", () => {
+//   for (let i = 0; i < listMenu.length; i++) {
+//     if (menu[i].style.display === "block") {
+//       menu[i].style.display = "none";
+//     } else {
+//       menu[i].style.display = "block";
+//     }
+//     console.log("oke!" + i);
 //   }
 // });
 
