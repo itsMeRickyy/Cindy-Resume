@@ -9,7 +9,7 @@
 
     <title>Its Me Cindy</title>
   </head>
-  <body class="font-poppins relative">
+  <body class="font-poppins relative overflow-x-hidden">
     <div id="container" class="relative py-6">
       <div id="navigasi" class="z-10 justify-around md:justify-between shadow-lg md:mx-auto mx-auto px-5 w-[90%] md:container md:left-0 md:right-0 md:mt-10 rounded-xl">
         <div id="navbar" class="flex justify-between">
@@ -36,18 +36,19 @@
         <!-- mobile-navigasi -->
         <div id="mobileMenu" class="hidden fixed w-[75%] py-5 z-30">
           <div class="text-center z-10">
-            <ul class="flex flex-col text-center w-full bg-blue-300">
-              <li class="w-full bg-green-300"><a class="" href="#">About</a></li>
-              <li><a href="#">What i do</a></li>
-              <li><a href="#">Portfolio</a></li>
-              <li><a href="#footer">Let's talk</a></li>
-            </ul>
+            <div class="mobileBtn flex flex-col text-center w-full bg-blue-300">
+              <button class="w-full bg-green-300"><a class="" href="#">About</a></button>
+              <button><a href="#">What i do</a></button>
+              <button><a href="#">Portfolio</a></button>
+              <button><a href="#footer">Let's talk</a></button>
+            </div>
           </div>
         </div>
-        <!-- Portfolio -->
+        <!-- Portfolio Header -->
         <div class="flex flex-col">
-          <div class="flex flex-col md:flex-row md:justify-between w-full">
-            <div class="flex-1 pt-10 py-3">
+          <div class="flex flex-col md:flex-row md:justify-around w-full">
+            <!-- hero text -->
+            <div class="pt-10 py-3">
               <p class="font-medium md:text-2xl flex flex-col gap-5">Hello, I'm Cindy</p>
               <h1 class="lg:text-4xl md:mt-5 text-lg md:text-2xl font-bold">I'm Administrator Officer and Profesional Accountant</h1>
               <p class="py-2">Working actually in <span class="font-bold">CV.Jagoan Kuliner</span></p>
@@ -122,40 +123,45 @@
                   </li>
                 </ul>
               </div>
-              <!-- mobile breakpoint button -->
+              <!-- Desktop button version -->
               <div class="pt-10 md:mt-10 gap-10 mx-auto hidden md:flex">
-                <div class="w-32 h-12 md:w-40 md:h-14 bg-purple-400 flex rounded-xl p-[2px]">
+                <div class="w-[130px] h-[40px] bg-purple-400 flex rounded-xl p-[2px]">
                   <a href="" class="w-full bg-white rounded-xl font-bold flex justify-center items-center text-pink-500">Portfolio</a>
                 </div>
-                <div id="btn-lets-talk" class="w-32 h-12 md:w-40 md:h-14 bg-purple-400 flex rounded-xl">
+                <div id="btn-lets-talk" class="w-[130px] h-[40px] bg-purple-400 flex rounded-xl">
                   <a href="" class="flex justify-center items-center w-full font-bold text-white">Let's Talk</a>
                 </div>
               </div>
             </div>
             <!-- Profile Picture -->
-            <div class="relative flex flex-c justify-center py-10 flex-1">
-              <div id="heroImg" class="rounded-full w-[60%] min-w-[40%] md:w-[50%] overflow-hidden">
+            <div class="relative flex justify-center py-10">
+              <div id="heroImg" class="rounded-full w-[60%] min-w-[40%] md:w-[100%] md:scale-75 overflow-hidden flex flex-shrink-0 flex-grow-0">
                 <img class="md:max-w-[350px] md:max-h-[350px] md:min-h-[100px] md:min-w-[100px]" src="./assets/Untitled-1 copy.png" alt="" />
               </div>
             </div>
             <!-- button -->
             <div class="pb-8 md:hidden flex gap-10 justify-center w-">
-              <div class="w-32 h-12 md:w-40 md:h-14 bg-purple-400 flex rounded-xl p-[2px]">
-                <a href="" class="w-full bg-white rounded-xl font-bold flex justify-center items-center text-pink-500">Portfolio</a>
+              <div class="w-[130px] h-[40px] bg-purple-400 flex rounded-xl p-[2px]">
+                <a href="" class="w-full bg-slate-100 rounded-xl font-bold flex justify-center items-center text-pink-500">Portfolio</a>
               </div>
-              <div id="btn-lets-talk" class="w-32 h-12 md:w-40 md:h-14 bg-purple-400 flex rounded-xl">
+              <div id="btn-lets-talk" class="w-[130px] h-[40px] bg-purple-400 flex rounded-xl">
                 <a href="" class="flex justify-center items-center w-full font-bold text-white">Let's Talk</a>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <!-- section-1 -->
-      <div class="shadow-lg md:mx-auto bg-blue-300 my-10 mx-auto w-[90%] md:container rounded-xl p-5">
+      <!-- What i do -->
+      <div class="shadow-lg md:mx-auto my-10 mx-auto w-[90%] md:container rounded-xl p-5">
         <div>
-          <h1 class="text-2xl font-bold">What i do</h1>
-          <div class="flex w-[800px] overflow-x-scroll -translate-x-80">
-            <div class="mr-10">
+          <div class="flex gap-5">
+            <div><h1 class="text-2xl font-bold">What i do</h1></div>
+            <div class="flex justify-center items-center bg-white w-10 rounded-lg">
+              <button id="show-what-i-do-btn"><img src="assets/icon/caret-down.svg" alt="" /></button>
+            </div>
+          </div>
+          <div id="What_i_Do" class="hidden flex-col md:flex-row justify-around">
+            <div class="md:max-w-[350px]">
               <div class="my-5">
                 <svg
                   class=""
@@ -186,68 +192,135 @@
               </p>
             </div>
             <hr class="h-px my-8 bg-gray-600 border-0" />
+            <div class="md:max-w-[350px]">
+              <div class="my-5">
+                <svg
+                  class=""
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="icon icon-tabler icon-tabler-calculator"
+                  width="54"
+                  height="54"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M4 3m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"></path>
+                  <path d="M8 7m0 1a1 1 0 0 1 1 -1h6a1 1 0 0 1 1 1v1a1 1 0 0 1 -1 1h-6a1 1 0 0 1 -1 -1z"></path>
+                  <path d="M8 14l0 .01"></path>
+                  <path d="M12 14l0 .01"></path>
+                  <path d="M16 14l0 .01"></path>
+                  <path d="M8 17l0 .01"></path>
+                  <path d="M12 17l0 .01"></path>
+                  <path d="M16 17l0 .01"></path>
+                </svg>
+              </div>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, vitae perspiciatis iste quisquam quos beatae delectus officiis et? Ipsam explicabo quam delectus optio neque blanditiis ipsum dolor labore rerum? Ducimus.
+              </p>
+            </div>
+            <hr class="h-px my-8 bg-gray-600 border-0" />
+            <div class="md:max-w-[350px]">
+              <div class="my-5">
+                <svg
+                  class=""
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="icon icon-tabler icon-tabler-calculator"
+                  width="54"
+                  height="54"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M4 3m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"></path>
+                  <path d="M8 7m0 1a1 1 0 0 1 1 -1h6a1 1 0 0 1 1 1v1a1 1 0 0 1 -1 1h-6a1 1 0 0 1 -1 -1z"></path>
+                  <path d="M8 14l0 .01"></path>
+                  <path d="M12 14l0 .01"></path>
+                  <path d="M16 14l0 .01"></path>
+                  <path d="M8 17l0 .01"></path>
+                  <path d="M12 17l0 .01"></path>
+                  <path d="M16 17l0 .01"></path>
+                </svg>
+              </div>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, vitae perspiciatis iste quisquam quos beatae delectus officiis et? Ipsam explicabo quam delectus optio neque blanditiis ipsum dolor labore rerum? Ducimus.
+              </p>
+            </div>
+            <hr class="h-px my-8 bg-gray-600 border-0" />
+          </div>
+        </div>
+      </div>
+      <!-- Portfolio -->
+      <div class="shadow-xl md:mx-auto my-10 mx-auto w-[90%] md:container rounded-xl p-5">
+        <div class="mb-5">
+          <h1 class="text-2xl font-bold text-white">Recent Project i do</h1>
+        </div>
+        <div class="flex-col">
+          <!-- project 1 -->
+          <div class="flex flex-col md:flex-row bg-white px-14 py-8 rounded-xl">
             <div>
-              <div class="my-5">
-                <svg
-                  class=""
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="icon icon-tabler icon-tabler-calculator"
-                  width="54"
-                  height="54"
-                  viewBox="0 0 24 24"
-                  stroke-width="2"
-                  stroke="currentColor"
-                  fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                  <path d="M4 3m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"></path>
-                  <path d="M8 7m0 1a1 1 0 0 1 1 -1h6a1 1 0 0 1 1 1v1a1 1 0 0 1 -1 1h-6a1 1 0 0 1 -1 -1z"></path>
-                  <path d="M8 14l0 .01"></path>
-                  <path d="M12 14l0 .01"></path>
-                  <path d="M16 14l0 .01"></path>
-                  <path d="M8 17l0 .01"></path>
-                  <path d="M12 17l0 .01"></path>
-                  <path d="M16 17l0 .01"></path>
-                </svg>
+              <h1 class="text-lg font-bold mb-5">Lorem ipsum.</h1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus fugit omnis dicta odio velit explicabo atque corrupti pariatur, ea aut autem recusandae molestias sint.</p>
+              <div class="hidden md:block my-5">
+                <button class="w-[130px] h-[40px] bg-purple-400 rounded-lg text-white font-bold">Look</button>
               </div>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, vitae perspiciatis iste quisquam quos beatae delectus officiis et? Ipsam explicabo quam delectus optio neque blanditiis ipsum dolor labore rerum? Ducimus.
-              </p>
             </div>
-            <hr class="h-px my-8 bg-gray-600 border-0" />
+            <div class="">
+              <div class="overflow-hidden rounded-xl flex justify-center md: mt-8 md:mt-0">
+                <div class="w-60 min-w-60 max-w-72 h-56 flex items-center justify-center">
+                  <img class="scale-150" src="assets/project/accounting.jpg" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Button -->
+          <div class="flex justify-center">
+            <button id="projectBtn" class="text-white mt-5 w-[130px] h-[40px] rounded-xl flex justify-center items-center"><img class="scale-125" src="assets/icon/caret-down.svg" alt="" /></button>
+          </div>
+          <!-- project 2 -->
+          <div id="project2" class="projectList hidden flex-col md:flex-row bg-white px-14 py-8 rounded-xl my-6">
             <div>
-              <div class="my-5">
-                <svg
-                  class=""
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="icon icon-tabler icon-tabler-calculator"
-                  width="54"
-                  height="54"
-                  viewBox="0 0 24 24"
-                  stroke-width="2"
-                  stroke="currentColor"
-                  fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                  <path d="M4 3m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"></path>
-                  <path d="M8 7m0 1a1 1 0 0 1 1 -1h6a1 1 0 0 1 1 1v1a1 1 0 0 1 -1 1h-6a1 1 0 0 1 -1 -1z"></path>
-                  <path d="M8 14l0 .01"></path>
-                  <path d="M12 14l0 .01"></path>
-                  <path d="M16 14l0 .01"></path>
-                  <path d="M8 17l0 .01"></path>
-                  <path d="M12 17l0 .01"></path>
-                  <path d="M16 17l0 .01"></path>
-                </svg>
+              <h1 class="text-lg font-bold mb-5">Lorem ipsum.</h1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus fugit omnis dicta odio velit explicabo atque corrupti pariatur, ea aut autem recusandae molestias sint.</p>
+              <div class="hidden md:block my-5">
+                <button class="w-[130px] h-[40px] bg-purple-400 rounded-lg text-white font-bold">Look</button>
               </div>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, vitae perspiciatis iste quisquam quos beatae delectus officiis et? Ipsam explicabo quam delectus optio neque blanditiis ipsum dolor labore rerum? Ducimus.
-              </p>
             </div>
-            <hr class="h-px my-8 bg-gray-600 border-0" />
+            <div class="">
+              <div class="overflow-hidden rounded-xl flex justify-center md: mt-8 md:mt-0">
+                <div class="w-60 min-w-60 max-w-72 h-56 flex items-center justify-center">
+                  <img class="scale-150" src="assets/project/accounting.jpg" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- project 3 -->
+          <div id="project3" class="projectList hidden flex-col md:flex-row bg-white px-14 py-8 rounded-xl my-6">
+            <div>
+              <h1 class="text-lg font-bold mb-5">Lorem ipsum.</h1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus fugit omnis dicta odio velit explicabo atque corrupti pariatur, ea aut autem recusandae molestias sint.</p>
+              <div class="hidden md:block my-5">
+                <button class="w-[130px] h-[40px] bg-purple-400 rounded-lg text-white font-bold">Look</button>
+              </div>
+            </div>
+            <div class="">
+              <div class="overflow-hidden rounded-xl flex justify-center md: mt-8 md:mt-0">
+                <div class="w-60 min-w-60 max-w-72 h-56 flex items-center justify-center">
+                  <img class="scale-150" src="assets/project/accounting.jpg" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- close button -->
+          <div id="closeProjectBtn" class="hidden justify-center">
+            <button id="projectBtn" class="text-white mt-5 w-[130px] h-[40px] rounded-xl flex justify-center items-center rotate-180"><img class="scale-125" src="assets/icon/caret-down.svg" alt="" /></button>
           </div>
         </div>
       </div>

@@ -32,16 +32,16 @@
   filter: blur(5);
 }
 
-#mobileMenu ul li:hover {
+#mobileMenu .mobileBtn button:hover {
   background: #b8b8b898;
 }
 
-#mobileMenu ul li {
+#mobileMenu .mobileBtn button {
   height: 60px;
   line-height: 60px;
 }
 
-#menu ul li:hover {
+#menu .mobileBtn button:hover {
   transform: scale(1.1);
 }
 
@@ -80,4 +80,12 @@
   background: linear-gradient(90deg, rgb(86, 190, 228) 30%, rgb(218, 121, 206) 100%, rgba(0, 212, 255, 1) 100%);
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
+}
+
+#show-what-i-do-btn {
+  transition: all;
+}
+
+#show-what-i-do-btn:hover {
+  transform: scale(1.3);
 }
