@@ -57,6 +57,7 @@ function myfunction() {
 
 const btnWhatIdo = document.getElementById("show-what-i-do-btn");
 const menuWhatIdo = document.getElementById("What_i_Do");
+const iconWhatIdo = btnWhatIdo.querySelector("img");
 
 btnWhatIdo.addEventListener("click", () => {
   if (menuWhatIdo.style.display === "flex") {
@@ -64,6 +65,12 @@ btnWhatIdo.addEventListener("click", () => {
   } else {
     menuWhatIdo.style.display = "flex";
   }
+
+  iconWhatIdo.classList.toggle("rotate-180");
+});
+
+iconWhatIdo.addEventListener("click", () => {
+  console.log("icon");
 });
 
 // Button project
@@ -94,7 +101,7 @@ closeProjectBtn.addEventListener("click", () => {
       projectList[i].style.display = "flex";
     }
   }
-
+  projectBtn.style.display = "flex";
   closeProjectBtn.style.display = "none";
   console.log("oke!");
 });
