@@ -1,5 +1,6 @@
 const toggle = document.getElementById("toggle");
 const menu = document.getElementById("mobileMenu");
+const menuBtn = menu.getElementsByTagName("button");
 const listMenu = menu.querySelector(".mobileBtn button");
 
 toggle.addEventListener("click", () => {
@@ -21,9 +22,25 @@ document.addEventListener("click", (e) => {
   }
 });
 
-listMenu.addEventListener("click", (e) => {
+// Hide menu
+
+for (var i = 0; i < menuBtn.length; i++) {
+  menuBtn[i].onclick = myfunction;
+}
+
+function myfunction() {
   menu.style.display = "none";
-});
+}
+
+// Hide menu
+
+// listMenu.addEventListener("click", (e) => {
+//   // menu.style.display = "none";
+//   for (let i = 0; i < menuBtn.length; i++) {
+//     menuBtn[i].style.display = "none";
+//   }
+//   console.log("okee!");
+// });
 
 // listMenu.addEventListener("click", () => {
 //   for (let i = 0; i < listMenu.length; i++) {
