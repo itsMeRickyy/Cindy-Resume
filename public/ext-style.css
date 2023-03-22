@@ -59,8 +59,12 @@
 #menu ul li {
   height: 65px;
   transition: all;
-  width: 80px;
+  width: 100px;
   line-height: 65px;
+}
+
+#menu ul li a:hover {
+  font-size: 17px;
 }
 
 #footer {
@@ -94,4 +98,15 @@
 
 #show-what-i-do-btn:hover {
   transform: scale(1.3);
+}
+
+/* .swiper {
+  width: 750px;
+  height: 500px;
+} */
+
+@media only screen and (max-width: 768px) {
+  .swiper-slide {
+    cursor: grab;
+  }
 }
